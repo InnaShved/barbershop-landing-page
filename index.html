@@ -26,7 +26,8 @@
                         </use>
                     </svg>
                 </a>
-                <button type="button" class="mobile-menu-btn">
+                <button type="button" class="menu-toggle js-open-menu" aria-expanded="false"
+          aria-controls="mobile-menu">
                     <svg class="icon-mobile-menu">
                         <use href="./images/icons.svg#icon-mobile-menu"></use>
                     </svg>
@@ -50,7 +51,7 @@
                 </nav>
                 <div class="header-contacts">
                     <a class="header-link phone" href="tel:+380961111111">+39 096 111 11 11</a>
-                    <button class="button" type="button" data-modal-open>Запис онлайн</button>
+                    <button class="button data-modal-open" type="button" data-modal-open>Запис онлайн</button>
                 </div>
                 
             </div>
@@ -86,12 +87,16 @@
             </div>
         </section>
         <!-- about section -->
-        <!-- <section class="section about" id="about">
+        <section class="section about" id="about">
             <div class="container">
                 <div class="about-container">
-                    <div class="about-images">
-                        <img src="./images/beard.jpg" alt="beard shaving">
-                        <img src="./images/hair-cut.jpg" alt="hair-cutting">
+                    <div class="about-images-desktop">
+                        <img srcset="./images/beard.jpg 1x, ./images/beard@2x.jpg 2x" src="./images/beard.jpg" alt="beard shaving" width="270">
+                        <img srcset="./images/hair-cut.jpg 1x, ./images/hair-cut@2x.jpg 2x" src="./images/hair-cut.jpg" alt="hair-cutting" width="270">
+                    </div>
+                    <div class="about-images-tablet">
+                        <img srcset="./images/tablet-beard.jpg 1x, ./images/tablet-beard@2x.jpg 2x" src="./images/tablet-beard.jpg" alt="beard shaving" width="330">
+                        <img srcset="./images/tablet-hair-cut.jpg 1x, ./images/tablet-hair-cut@2x.jpg 2x" src="./images/tablet-hair-cut.jpg" alt="hair-cutting" width="330">
                     </div>
                     <div class="about-content">
                         <h2 class="section-tagline">Про нас</h2>
@@ -102,14 +107,14 @@
                             ніколи не зможеш бути тим самим. Ми команда, яка завжди з клієнтами "на одній хвилі". Тому ми завжди готові
                             вдосконалити
                             кожного, хто до нас приходить.</p>
-                        <button class="button button-dark" type="button" data-modal-open >Онлайн запис</button>
+                        <button class="button button-dark" type="button" about-data-modal-open >Онлайн запис</button>
                     </div>
                 </div>
    
             </div>
-        </section> -->
+        </section>
                 <!-- pricing section -->
-                <!-- <section class=" section pricing-section" id="pricing">
+                <section class=" section pricing-section" id="pricing">
                     <div class="container">
                        <div class="price-container">
                         <p class="section-tagline section-tagline-light">Проведи час у компанії кращих майстрів</p>
@@ -173,16 +178,16 @@
                             </li>
                         </ul>
                         <div class="price-button">
-                            <button class="button" type="button" data-modal-open >Онлайн запис</button>
+                            <button class="button" type="button" data-modal-open>Онлайн запис</button>
                         </div>
                        </div>
 
                          
                     </div>
             </div>
-        </section> -->
+        </section> 
         <!-- ADVANTAGES section -->
-        <!-- <section class="section achievements-section">
+        <section class="section achievements-section">
             <div class="container">
                 <div class="achievements-container">
                     <ul class="achivements-list">
@@ -220,9 +225,9 @@
                 
                 
             </div>
-        </section> -->
+        </section>
         <!-- masters section -->
-        <!-- <section class="section masters-section" id="masters">
+        <section class="section masters-section" id="masters">
             <div class="container">
                 
                 <p class="section-tagline">Для справжніх поціновувачів атмосфери</p>
@@ -230,7 +235,12 @@
                 <ul class="masters-list">
                     <li lang="en" class="master-item">
                         <div class="master-image">
-                            <img src="./images/john.jpg" alt="John Smith" class="master-img">
+                            <picture class="master-img">
+                                <source srcset="./images/desktop-john.jpg 1x, ./images/desktop-john@2x.jpg 2x" media="(min-width: 1200px)">
+                                <source srcset="./images/tablet-john.jpg 1x, ./images/tablet-john@2x.jpg 2x" media="(min-width: 768px)">
+                                <source srcset="./images/mobile-john.jpg 1x, ./images/mobile-john@2x.jpg 2x" media="(max-width: 767px)">  
+                                <img src="./images/mobile-jhon.jpg" alt="John Smith" >                                                  
+                            </picture>
                             <div class="master-overlay">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, labore quas! Eum nihil odio, ipsum dolorum adipisci similique eaque reiciendis atque iure repudiandae cupiditate neque maiores maxime dolorem veritatis tempora.</p>
                             </div>
@@ -275,7 +285,12 @@
                     </li>
                     <li lang="en" class="master-item">
                         <div class="master-image">
-                            <img src="./images/michele.jpg" alt="John Smith" class="master-img">
+                            <picture class="master-img">
+                                <source srcset="./images/desktop-michele.jpg 1x, ./images/desktop-michele@2x.jpg 2x" media="(min-width: 1200px)">
+                                <source srcset="./images/tablet-michele.jpg 1x, ./images/tablet-michele@2x.jpg 2x" media="(min-width: 768px)">
+                                <source srcset="./images/mobile-michele.jpg 1x, ./images/mobile-michele@2x.jpg 2x" media="(max-width: 767px)">
+                                <img src="./images/mobile-michele.jpg" alt="Michele Doe">
+                            </picture>
                             <div class="master-overlay">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, labore quas! Eum nihil odio, ipsum dolorum
                                     adipisci similique eaque reiciendis atque iure repudiandae cupiditate neque maiores maxime dolorem veritatis
@@ -320,7 +335,12 @@
                     </li>
                     <li lang="en" class="master-item">
                         <div class="master-image">
-                            <img src="./images/alan.jpg" alt="John Smith" class="master-img">
+                            <picture class="master-img">
+                                <source srcset="./images/desktop-alan.jpg 1x, ./images/desktop-alan@2x.jpg 2x" media="(min-width: 1200px)">
+                                <source srcset="./images/tablet-alan.jpg 1x, ./images/tablet-alan@2x.jpg 2x" media="(min-width: 768px)">
+                                <source srcset="./images/mobile-alan.jpg 1x, ./images/mobile-alan@2x.jpg 2x" media="(max-width: 767px)">
+                                <img src="./images/mobile-alan.jpg" alt="Alan Black">
+                            </picture>
                             <div class="master-overlay">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, labore quas! Eum nihil odio, ipsum dolorum
                                     adipisci similique eaque reiciendis atque iure repudiandae cupiditate neque maiores maxime dolorem veritatis
@@ -366,18 +386,50 @@
                     </li>
                 </ul>
             </div>
-        </section> -->
-        <!-- <section class="section workprocess-section">
+        </section>
+        <section class="section workprocess-section">
             <div class="container">
                 <p class="section-tagline">З латині "барба" означає "борода"</p>
             <ul class="workprocess-container">
-                <li class="workprocess-item"><img src="./images/workprocess1.jpg" alt="hair-cutting process" class="workprocess-img"></li>
-                <li class="workprocess-item"><img src="./images/workprocess2.jpg" alt="shaving process" class="workprocess-img"></li>
-                <li class="workprocess-item"><img src="./images/workprocess3.jpg" alt="hair-wash" class="workprocess-img"></li>
-                <li class="workprocess-item"><img src="./images/workprocess4.jpg" alt="hair-cutting process" class="workprocess-img"></li>
+                <li class="workprocess-item">
+                    <picture  class="workprocess-img">
+                        <source srcset="../images/workprocess1.jpg 1x, ./images/workprocess1@2x.jpg 2x" media="(min-width: 1200px)">
+                        <source srcset="./images/tablet-work-process1.jpg 1x, ./images/tablet-work-process1@2x.jpg 2x" media="(min-width: 768px)">
+                        <source srcset="./images/mobile-work-process1.jpg 1x, ./images/mobile-work-process1@2x.jpg 2x" media="(max-width: 767px)">
+                        <img src="./images/workprocess1.jpg" alt="hair-cutting process">
+                    </picture>
+                </li>
+                <li class="workprocess-item">
+                    <picture  class="workprocess-img">
+                        <source srcset="../images/workprocess2.jpg 1x, ./images/workprocess2@2x.jpg 2x" media="(min-width: 1200px)">
+                        <source srcset="./images/tablet-work-process2.jpg 1x, ./images/tablet-work-process2@2x.jpg 2x" media="(min-width: 768px)">
+                        <source srcset="./images/mobile-work-process2.jpg 1x, ./images/mobile-work-process2@2x.jpg 2x" media="(max-width: 767px)">
+                        <img src="./images/workprocess2.jpg" alt="shaving process">
+                    </picture>
+                </li>
+                <li class="workprocess-item">
+                    <picture class="workprocess-img">
+                        <source srcset="../images/workprocess3.jpg 1x, ./images/workprocess3@2x.jpg 2x" media="(min-width: 1200px)">
+                        <source srcset="./images/tablet-work-process3.jpg 1x, ./images/tablet-work-process3@2x.jpg 2x"
+                            media="(min-width: 768px)">
+                        <source srcset="./images/mobile-work-process3.jpg 1x, ./images/mobile-work-process3@2x.jpg 2x"
+                            media="(max-width: 767px)">
+                        <img src="./images/workprocess3.jpg" alt="hair-wash">
+                    </picture>
+                </li>
+                <li class="workprocess-item">
+                    <picture class="workprocess-img">
+                        <source srcset="../images/workprocess4.jpg 1x, ./images/workprocess4@2x.jpg 2x" media="(min-width: 1200px)">
+                        <source srcset="./images/tablet-work-process4.jpg 1x, ./images/tablet-work-process4@2x.jpg 2x"
+                            media="(min-width: 768px)">
+                        <source srcset="./images/mobile-work-process4.jpg 1x, ./images/mobile-work-process4@2x.jpg 2x"
+                            media="(max-width: 767px)">
+                        <img src="./images/workprocess4.jpg" alt="hair-cutting process">
+                    </picture>
+                </li>
             </ul>
             </div>
-        </section> -->
+        </section>
         <!-- <section  class='contacts-section' id="contacts">
             <div class="container">
                 <div class="contact-container">
@@ -489,8 +541,33 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div class="menu-container js-menu-container" id="mobile-menu">
-        
+    <div class="menu-container-backdrop js-menu-container" id="mobile-menu">
+        <div class="menu-container">
+            <button class="menu-toggle js-close-menu">
+                <svg class="mobile-icon-close" width="32px" height="32px">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+
+            
+            <div class="mobile-menu-content">
+                <ul class="mobile-header-menu">
+                    <li class="item"><a class="mobile-header-link" href="#about">Про нас</a></li>
+                    <li class="item"><a class="mobile-header-link" href="#pricing">Ціни та послуги</a></li>
+                    <li class="item"><a class="mobile-header-link" href="#masters">Майстри</a></li>
+                    <li class="item"><a class="mobile-header-link" href="#contacts">Контакти</a></li>
+                </ul>
+                <div class="mobile-contacts">
+                    <a class="mobile-header-link phone" href="tel:+380961111111">+39 096 111 11 11</a>
+                    <button class="button button-dark" type="button" data-modal-open>Запис онлайн</button>
+                </div>
+                <ul class="mobile-menu-socials">
+                    <li><a class="mobile-social-link soc-link-instagram" href="">Instagram</a></li>
+                    <li><a class="mobile-social-link" href="">Youtube</a></li>
+                </ul>
+            </div>
+            
+        </div>
     </div>
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
